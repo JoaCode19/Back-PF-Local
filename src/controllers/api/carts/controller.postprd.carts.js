@@ -1,7 +1,7 @@
 import { cartService } from "../../../services/cart.services.js";
 
 export async function postPdrInCart(req, res, next) {
-  req.logger.http("inside post products in cart");
+  req.logger.https("inside post products in cart");
   try {
     const product = await cartService.chargeProducts(
       req.params.cid,

@@ -4,7 +4,7 @@ import { productsRepository } from "../../../repositories/product.repositorie.js
 import { emailService } from "../../../services/email.service.js";
 
 export async function deleteProduct(req, res, next) {
-  req.logger.http("inside delete products");
+  req.logger.https("inside delete products");
   try {
     const producto = await productsRepository.findOneById(req.params.pid);
     if (

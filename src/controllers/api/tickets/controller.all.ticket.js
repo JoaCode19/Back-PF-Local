@@ -2,7 +2,7 @@ import { ticketsRepository } from "../../../repositories/ticket.repository.js";
 import { ticketService } from "../../../services/purchease.service.js";
 
 export async function handlePost(req, res, next) {
-  req.logger.http("inside post ticket");
+  req.logger.https("inside post ticket");
   try {
     const ticket = await ticketService.createTicket(req.body);
     res.status(200).json(ticket);
@@ -13,7 +13,7 @@ export async function handlePost(req, res, next) {
 }
 
 export async function handleGet(req, res) {
-  req.logger.http("inside get tickets");
+  req.logger.https("inside get tickets");
   const ticket = await ticketsRepository.findOneById(req.params.id);
   return ticket;
 }

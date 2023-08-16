@@ -2,7 +2,7 @@ import { ErrorPermissions } from "../../../models/error/errors.model.js";
 import { userRepository } from "../../../repositories/users.repository.js";
 
 export async function deleteOneUserController(req, res, next) {
-  req.logger.http("inside delete one user");
+  req.logger.https("inside delete one user");
   try {
     const user = await userRepository.findOneById(req.params.uid);
     let deleter;

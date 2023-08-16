@@ -6,7 +6,7 @@ import { userRepository } from "../../../repositories/users.repository.js";
 import { emailService } from "../../../services/email.service.js";
 
 export async function deleteAllUserController(req, res, next) {
-  req.logger.http("inside delete all user");
+  req.logger.https("inside delete all user");
   try {
     const users = await userRepository.findMany();
     users.forEach(async (u) => {

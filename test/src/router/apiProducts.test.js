@@ -3,7 +3,7 @@ import supertest from "supertest";
 import { pmg } from "../../../src/dao/mongoose/product.dao.mg.js";
 import { Uid } from "../../../src/utils/UiD.js";
 
-const httpClient = supertest("https://localhost:8080");
+const httpClient = supertest("http://localhost:8080");
 
 describe("api rest", () => {
   describe("/api/products", () => {
@@ -136,7 +136,7 @@ describe("api rest", () => {
 // // import { productsRepository } from '../../../repositories/product.repositorie.js';
 // // import { pmg } from '../../../dao/mongoose/product.dao.mg.js';
 
-// const httpClient = supertest('https://localhost:8080');
+// const httpClient = supertest('http://localhost:8080');
 
 // describe('api rest', () => {
 //   describe('/api/products', () => {

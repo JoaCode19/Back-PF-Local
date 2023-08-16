@@ -3,7 +3,7 @@ import supertest from "supertest";
 import { Uid } from "../../../src/utils/UiD.js";
 import { cmg } from "../../../src/dao/mongoose/cart.dao.mg.js";
 
-const httpClient = supertest("https://localhost:8080");
+const httpClient = supertest("http://localhost:8080");
 
 describe("api rest", () => {
   describe("/api/carts", () => {

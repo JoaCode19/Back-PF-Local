@@ -1,7 +1,7 @@
 import { cartRepository } from "../../../repositories/cart.repositrie.js";
 
 export async function deleteAllPrdCart(req, res, next) {
-  req.logger.http("inside delete all products in cart");
+  req.logger.https("inside delete all products in cart");
   try {
     const deleter = await cartRepository.delAllProductsInCart(req.params.cid);
     res.status(200).json(deleter);

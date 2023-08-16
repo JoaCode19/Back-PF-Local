@@ -7,7 +7,7 @@ import { decodeToken } from "../../../utils/cripto.js";
 
 export async function postUsersRecover(req, res, next) {
   try {
-    req.logger.http("inside get  recover-user");
+    req.logger.https("inside get  recover-user");
     const user = JSON.parse(JSON.stringify(decodeToken(req.body.token)));
     req.logger.info(user);
     const userToUpd = await userRepository.findOne({ email: user.email });

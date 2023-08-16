@@ -1,7 +1,7 @@
 import { cartService } from "../../../services/cart.services.js";
 
 export async function delPrdInCart(req, res, next) {
-  req.logger.http("inside delete some products in cart");
+  req.logger.https("inside delete some products in cart");
   try {
     const deleter = await cartService.deleteProducts(
       req.params.cid,

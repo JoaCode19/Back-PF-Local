@@ -2,7 +2,7 @@ import { ErrorPermissions } from "../../../models/error/errors.model.js";
 import { productsRepository } from "../../../repositories/product.repositorie.js";
 
 export async function getProductCodeController(req, res, next) {
-  req.logger.http("inside get products by code");
+  req.logger.https("inside get products by code");
   try {
     const producto = await productsRepository.findOne({ code: req.params.pcd });
     if (

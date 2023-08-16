@@ -4,7 +4,7 @@ import { encriptarJWT } from "../../../utils/cripto.js";
 
 export async function postUsersForgot(req, res, next) {
   try {
-    req.logger.http("inside get  forgot-user");
+    req.logger.https("inside get  forgot-user");
     const user = await userRepository.findOne({ email: req.body.email });
     req.logger.info(user);
     const recoveryToken = encriptarJWT({ email: user.email });
@@ -12,7 +12,7 @@ export async function postUsersForgot(req, res, next) {
       subject: "Recuperación de contraseña",
       mensaje: `Hola,\n\n
           Para restablecer tu contraseña, haz clic en el siguiente enlace: \n\n
-          https://localhost:8080/recover?token=${recoveryToken}\n\n
+          http://localhost:8080/recover?token=${recoveryToken}\n\n
           Si no has solicitado un restablecimiento de contraseña, ignora este correo.\n\n
           Saludos,\n
           Astros⭐`,

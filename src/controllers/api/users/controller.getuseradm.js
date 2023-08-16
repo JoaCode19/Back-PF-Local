@@ -6,7 +6,7 @@ import {
 import { userRepository } from "../../../repositories/users.repository.js";
 
 export async function getUsersAdm(req, res, next) {
-  req.logger.http("inside get-admin user");
+  req.logger.https("inside get-admin user");
   try {
     const user = await userRepository.findOneById(req.params.uid);
     if (user.role === "super-admin")

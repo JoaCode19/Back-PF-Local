@@ -1,7 +1,7 @@
 import assert from "assert";
 import supertest from "supertest";
 
-const httpClient = supertest("https://localhost:8080");
+const httpClient = supertest("http://localhost:8080");
 
 describe("api rest", () => {
   describe("/api/sessions", () => {

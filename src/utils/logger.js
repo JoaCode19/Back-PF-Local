@@ -6,7 +6,7 @@ import winston from "winston";
 //   error: 0,
 //   warn: 1,
 //   info: 2,
-//   http: 3,
+//   https: 3,
 //   verbose: 4,
 //   debug: 5,
 //   silly: 6,
@@ -17,7 +17,7 @@ const myOwnLevels = {
   error: 1,
   warning: 2,
   info: 3,
-  http: 4,
+  https: 4,
   verbose: 5,
   debug: 6,
 };

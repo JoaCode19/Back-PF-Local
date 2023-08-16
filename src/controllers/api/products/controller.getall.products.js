@@ -1,10 +1,10 @@
 import { productsRepository } from "../../../repositories/product.repositorie.js";
 
 export async function getProductsController(req, res, next) {
-  req.logger.http("inside get products");
+  req.logger.https("inside get products");
   if (process.env.PERSISTENCIA === "mongoose") {
     try {
-      const urlsrt = `https://localhost:8080${req.originalUrl}`;
+      const urlsrt = `http://localhost:8080${req.originalUrl}`;
       const result = await productsRepository.getPaginatedElements(
         req.query,
         urlsrt

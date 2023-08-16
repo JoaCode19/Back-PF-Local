@@ -1,7 +1,7 @@
 import { moackingProducts } from "../../../utils/mocks/mock.product.js";
 
 export async function getProductsMocked(req, res, next) {
-  req.logger.http("inside get products mocked");
+  req.logger.https("inside get products mocked");
   try {
     const products = await moackingProducts();
     res.status(200).json(products);

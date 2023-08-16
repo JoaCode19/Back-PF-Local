@@ -3,7 +3,7 @@ import { userRepository } from "../../../repositories/users.repository.js";
 import { encriptarJWT } from "../../../utils/cripto.js";
 
 export function getCurrentSessionController(req, res, next) {
-  req.logger.http("inside get current sessions");
+  req.logger.https("inside get current sessions");
   try {
     const userws = userRepository.findMany();
     res.json(userws);
@@ -13,7 +13,7 @@ export function getCurrentSessionController(req, res, next) {
 }
 
 export async function postSesiones(req, res, next) {
-  req.logger.http("inside post session");
+  req.logger.https("inside post session");
   try {
     const usrLoged = await userRepository.findOne({ email: req.user.email });
     usrLoged.last_connection = formatDate(new Date());
@@ -29,7 +29,7 @@ export async function postSesiones(req, res, next) {
 }
 
 export async function deleteSesiones(req, res, next) {
-  req.logger.http("inside delete session");
+  req.logger.https("inside delete session");
   try {
     const usr = req.session.user || req.session.passport.user;
     const usrLoged = await userRepository.findOne({

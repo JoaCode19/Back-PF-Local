@@ -1,7 +1,7 @@
 import { cartRepository } from "../../../repositories/cart.repositrie.js";
 
 export async function putCart(req, res, next) {
-  req.logger.http("inside put cart");
+  req.logger.https("inside put cart");
   try {
     const productosEnCarro = await cartRepository.updateCart(
       req.params.cid,

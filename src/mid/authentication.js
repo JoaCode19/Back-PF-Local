@@ -44,7 +44,7 @@ passport.use(
     {
       clientID: CLIENTID_GIT,
       clientSecret: CLIENTSCR_GIT,
-      callbackURL: "https://localhost:8080/api/sessions/gitcall",
+      callbackURL: "http://localhost:8080/api/sessions/gitcall",
       passReqToCallback: true,
     },
     async (req, accessToken, refreshToken, profile, done) => {
@@ -146,7 +146,7 @@ export function anthGithub_CB(req, res, next) {
 }
 
 export function authJwtApi(req, res, next) {
-  if (process.env.PERSISTECIA !== "mongoose") return next();
+  if (process.env.PERSISTENCIA !== "mongoose") return next();
 
   passport.authenticate("jwt", (error, jwt_payload, info) => {
     if (error || !jwt_payload) return next(new ErrorAuthothentication());

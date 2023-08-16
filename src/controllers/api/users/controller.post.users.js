@@ -3,7 +3,7 @@ import { userService } from "../../../services/users.service.js";
 import { emailService } from "../../../services/email.service.js";
 
 export async function postUsuarios(req, res, next) {
-  req.logger.http("inside post user");
+  req.logger.https("inside post user");
   try {
     const userCreated = await userService.registrar(req.body);
     req.session.user = userCreated;

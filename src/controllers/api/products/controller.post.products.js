@@ -3,7 +3,7 @@ import { socketFn } from "../../../mid/soketio.rt.js";
 import { productsRepository } from "../../../repositories/product.repositorie.js";
 
 export async function postProductController(req, res, next) {
-  req.logger.http("inside post products");
+  req.logger.https("inside post products");
   try {
     const prod = {
       title: req.body.title,
